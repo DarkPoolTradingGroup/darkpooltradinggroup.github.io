@@ -1,0 +1,95 @@
+---
+import "../styles/tailwind.css";
+
+const { title = "Dark Pool Trading Group LLC", description = "Engineering the future of markets through generative AI, quantum-inspired computation, and high-velocity innovation." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-slate-950 text-slate-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="min-h-screen flex flex-col bg-slate-950 text-slate-100">
+    <header class="border-b border-slate-800 bg-slate-950/90 backdrop-blur">
+      <div class="container-page flex items-center justify-between py-4">
+        <a href="/" class="flex items-center gap-2">
+          <div
+            class="h-9 w-9 rounded-xl bg-[--color-brand] flex items-center justify-center font-bold text-sm tracking-tight"
+          >
+          <img src="logo.png" width=40 height=40 class="rounded-sm border-1 border-white-300" />
+          </div>
+          <span class="text-lg font-semibold tracking-tight">
+            Dark Pool Trading Group
+          </span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="/" class="hover:text-[--color-brand] transition-colors">Home</a>
+          <a href="/about" class="hover:text-[--color-brand] transition-colors">About</a>
+          <a href="/contact" class="hover:text-[--color-brand] transition-colors">Contact</a>
+        </nav>
+
+        <a
+          href="/contact"
+          class="hidden md:inline-flex items-center rounded-full border border-[--color-brand] bg-[--color-brand] px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-[--color-brand-soft] transition-colors"
+        >
+          Let’s talk
+        </a>
+
+        <button
+          class="md:hidden inline-flex items-center justify-center rounded-full border border-slate-700 px-3 py-1 text-xs font-semibold text-slate-100"
+          aria-label="Menu"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <!-- Tall footer -->
+    <footer class="mt-16 bg-black border-t border-slate-800">
+      <div class="container-page py-12 grid gap-8 md:grid-cols-[2fr_1fr_1fr]">
+        <div>
+          <h2 class="text-lg font-semibold tracking-tight mb-3">Dark Pool Trading Group</h2>
+          <p class="text-sm text-slate-400 max-w-md">
+            Engineering the future through high-velocity innovation.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold text-slate-200 mb-3">Company</h3>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="/about" class="hover:text-[--color-brand]">About</a></li>
+            <li><a href="/contact" class="hover:text-[--color-brand]">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold text-slate-200 mb-3">Connect</h3>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="https://www.linkedin.com/company/dark-pool-trading-group-llc/" class="hover:text-[--color-brand]">LinkedIn</a></li>
+            <li><a href="https://github.com/DarkPoolTradingGroup" class="hover:text-[--color-brand]">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-900">
+        <div class="container-page py-4 flex flex-col md:flex-row items-center justify-between gap-3">
+          <p class="text-xs text-slate-500">
+            © {new Date().getFullYear()} Dark Pool Trading Group LLC. All rights reserved.
+          </p>
+          <div class="flex items-center gap-4 text-xs text-slate-500">
+            <a href="#" class="hover:text-[--color-brand]">Privacy</a>
+            <a href="#" class="hover:text-[--color-brand]">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

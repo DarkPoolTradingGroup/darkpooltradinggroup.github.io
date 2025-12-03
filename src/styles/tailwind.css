@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Design tokens via Tailwind v4 @theme, bold but professional */
+@theme {
+  --color-brand: #2563eb;       /* blue-600 */
+  --color-brand-soft: #1d4ed8;  /* blue-700 */
+  --color-accent: #f97316;      /* orange-500 */
+  --color-bg: #020617;          /* slate-950 */
+  --color-surface: #020617;     /* same, subtle layering */
+  --color-surface-elevated: #020617;
+}
+
+/* Global layout + typography */
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  background-color: var(--color-bg);
+}
+
+/* Simple link style reset so Tailwind utilities don't look like junk */
+a {
+  text-decoration: none;
+}
+
+/* Just a tiny helper for section max width */
+.container-page {
+  @apply max-w-6xl mx-auto px-4;
+}

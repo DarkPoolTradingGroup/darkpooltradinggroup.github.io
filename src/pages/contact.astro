@@ -1,0 +1,47 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import ContactForm from "../components/ContactForm";
+
+const title = "Contact – Dark Pool Trading Group LLC";
+const description = "Tell us what you’re building and we’ll tell you how we can help.";
+---
+
+<SiteLayout title={title} description={description}>
+  <section class="container-page py-16 md:py-20 grid gap-10 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] items-start">
+    <div class="space-y-6">
+      <header class="space-y-3">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-[--color-brand]">
+          Contact
+        </p>
+        <h1 class="text-3xl font-semibold tracking-tight">
+          Let’s make an impact.
+        </h1>
+        <p class="text-sm md:text-base text-slate-300">
+          Share a bit about your project and we’ll follow up with a brief call. No spam, no
+          newsletter, no nonsense.
+        </p>
+      </header>
+
+      <!-- SolidJS form island -->
+      <ContactForm client:load />
+    </div>
+
+    <aside class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 space-y-4 text-sm">
+      <h2 class="text-sm font-semibold tracking-tight mb-1">
+        What to expect
+      </h2>
+      <ul class="space-y-2 text-slate-300">
+        <li>• A response within 1–2 business days.</li>
+        <li>• A short call to understand scope and constraints.</li>
+        <li>• Clear next steps and a realistic timeline.</li>
+      </ul>
+
+      <div class="pt-2 border-t border-slate-800 mt-3 text-slate-400">
+        Prefer email?
+        <a href="mailto:hello@example.com" class="text-[--color-brand] hover:text-[--color-brand-soft]">
+          info@darkpooltradinggroup.com
+        </a>
+      </div>
+    </aside>
+  </section>
+</SiteLayout>

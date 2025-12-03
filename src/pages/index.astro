@@ -1,16 +1,103 @@
 ---
+import SiteLayout from "../layouts/SiteLayout.astro";
 
+const pageTitle = "Dark Pool Trading Group LLC";
+const pageDescription =
+  "Engineering the future of markets through generative AI, quantum-inspired computation, and high-velocity innovation.";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<SiteLayout title={pageTitle} description={pageDescription}>
+  <!-- Hero -->
+  <section class="border-b border-slate-900 bg-gradient-to-b from-slate-950 to-slate-900/40">
+    <div class="container-page py-16 md:py-24 grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] items-center">
+      <div class="space-y-6">
+        <span
+          class="inline-flex items-center rounded-full border border-[--color-brand]/30 bg-[--color-brand]/10 px-3 py-1 text-xs font-semibold text-[--color-brand]"
+        >
+          Artificial Intelligence · Innovative Hardware · Distributed Finance
+        </span>
+
+        <h1 class="text-3xl md:text-5xl font-semibold tracking-tight">
+          If you want to change the future, build it.
+        </h1>
+
+        <p class="text-sm md:text-base text-slate-300 max-w-xl">
+          The quickest path to mediocre performance is doing what everyone else does.
+        </p>
+
+        <p class="text-sm md:text-base text-slate-300 max-w-xl">
+          We help you find the commercial value in complex ideas and deliver quick experiments that build momentum to help you pull away from the pack.
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="/contact"
+            class="inline-flex items-center rounded-full bg-[--color-brand] px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-[--color-brand]/40 hover:bg-[--color-brand-soft] transition-colors"
+          >
+            Book a call
+          </a>
+          <a
+            href="/about"
+            class="inline-flex items-center rounded-full border border-slate-700 px-5 py-2 text-sm font-semibold text-slate-100 hover:border-[--color-brand] hover:text-[--color-brand] transition-colors"
+          >
+            Learn more
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="relative rounded-2xl border border-slate-800 bg-slate-900/60 shadow-[0_0_80px_rgba(37,99,235,0.35)]"
+      >
+        <img src="/work.jpg" width="500" class="rounded-2xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-section value proposition -->
+  <section class="container-page py-16 md:py-20">
+    <header class="max-w-2xl mb-10">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
+        Where the future is headed
+      </h2>
+      <p class="text-sm md:text-base text-slate-300">
+        Three things are defining the future: artificial intelligence, innovative hardware, and distributed finance.
+      </p>
+    </header>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      <!-- Section 1 -->
+      <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 flex flex-col gap-3">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[--color-brand]/15 text-[--color-brand] text-sm font-semibold">
+          01
+        </span>
+        <h3 class="text-lg font-semibold">Artificial Intelligence</h3>
+        <p class="text-sm text-slate-300">
+          ChatGPT and Generative AI may have the world's attention at the moment, but attention is not enough.
+          Innovation is happening rapidly across numerous models of intelligence. The task is commercializing it.
+        </p>
+      </article>
+
+      <!-- Section 2 -->
+      <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 flex flex-col gap-3">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[--color-accent]/10 text-[--color-accent] text-sm font-semibold">
+          02
+        </span>
+        <h3 class="text-lg font-semibold">Innovative Hardware</h3>
+        <p class="text-sm text-slate-300">
+          Most people have heard of CPUs and GPUs, but the future of intelligence is likely to be built on innovative platforms using probablistic computation, quantum computers, or analog computers.
+        </p>
+      </article>
+
+      <!-- Section 3 -->
+      <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 flex flex-col gap-3">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 text-sm font-semibold">
+          03
+        </span>
+        <h3 class="text-lg font-semibold">Distribute Finance</h3>
+        <p class="text-sm text-slate-300">
+          Blockchain technology was never going to replace financial institutions. Those institutions are now deploying blockchain at scale and this innovation will grow the market for financial tools and products many times larger.
+        </p>
+      </article>
+    </div>
+  </section>
+</SiteLayout>

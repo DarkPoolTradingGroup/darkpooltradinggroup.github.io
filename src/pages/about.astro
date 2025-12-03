@@ -1,0 +1,39 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+const title = "About – Dark Pool Trading Group LLC";
+const description = "Who we are, how we work, and what we actually care about.";
+---
+
+<SiteLayout title={title} description={description}>
+  <section class="container-page py-16 md:py-20 space-y-8">
+    <header class="space-y-3 max-w-2xl">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-[--color-brand]">
+        About
+      </p>
+      <h1 class="text-3xl font-semibold tracking-tight">
+        Dedicated to serious innovation.
+      </h1>
+    </header>
+
+    <div class="grid gap-10 md:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] items-start">
+      <div class="space-y-5 text-sm md:text-base text-slate-200 leading-relaxed">
+        <p>
+          We’ve worked with teams ranging from early-stage startups to established companies. The
+          common thread: ambitious innovation with a ruthless urgency for commercial success.
+        </p>
+        <p>
+          We focus on the most difficult parts of innovative technology stacks: compilers,
+          virtual machines, and innovative hardware.
+        </p>
+        <p>
+          Going further, faster requires working smarter, not harder.
+        </p>
+      </div>
+
+      <aside class="rounded-2xl border border-slate-800 bg-slate-900/60 space-y-4 text-sm">
+        <img src="/desk.jpeg" width="500" class="rounded-2xl">
+      </aside>
+    </div>
+  </section>
+</SiteLayout>
